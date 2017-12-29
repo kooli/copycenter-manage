@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="ccu_tree_type_transaction">
+            <field name="name">type_transaction_view_tree</field>
+            <field name="model">copycenter_uniflex.type_transaction</field>
+            <field name="arch" type="xml">
+                <tree string="Type de Transaction ">
+                    <field name="nom" > </field>
+                    <field name="desc" > </field>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="ccu_action_type_transaction">
+            <field name="name">Nouveau</field>
+            <field name="res_model">copycenter_uniflex.type_transaction</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Ajouter Type de transactions </p>
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

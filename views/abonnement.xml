@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--<record model="ir.ui.view" id="ccu_view_abonnement">-->
+            <!--<field name="name">abonnement_view_form</field>-->
+            <!--<field name="model">copycenter_uniflex.abonnement</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">Ajouter Cartes Prépayées </p>-->
+            <!--</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Cartes d'Abonnement ">-->
+                    <!--<field name="client_id"> </field>-->
+                    <!--<field name="codebar"> </field>-->
+                    <!--<field name="date_adonnement"> </field>-->
+                    <!--<field name="solde"> </field>-->
+                    <!--<field name="decouvert"> </field>-->
+                    <!--<field name="plafond_decouvert"> </field>-->
+                    <!--<field name="status"> </field>-->
+                    <!--<field name="desc"> </field>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record model="ir.ui.view" id="ccu_tree_abonnement">
+            <field name="name">abonnement_view_tree</field>
+            <field name="model">copycenter_uniflex.abonnement</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des Cartes d'Abonnement ">
+                    <field name="client_id"> </field>
+                    <field name="codebar"> </field>
+                    <field name="date_adonnement"> </field>
+                    <field name="solde"> </field>
+                    <field name="decouvert"> </field>
+                    <field name="plafond_decouvert"> </field>
+                    <field name="status"> </field>
+                    <field name="desc"> </field>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="ccu_action_abonnement">
+            <field name="name">Cartes Abonnement</field>
+            <field name="res_model">copycenter_uniflex.abonnement</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Ajouter Cartes Prépayées </p>
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

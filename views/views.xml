@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--<record model="ir.actions.act_window" id="ccu_action_dashboard">-->
+            <!--<field name="name">Dashboard</field>-->
+            <!--<field name="res_model">copycenter_uniflex.abonnement</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">DASHBOARD VIEWER-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record model="ir.ui.view" id="client_view">
+          <field name="name">client_view_form</field>
+          <field name="model">res.partner</field>
+          <field name="inherit_id" ref="base.view_partner_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='parent_id']" position='before'>
+                <field name="type_client"/>
+              </xpath>
+          </field>
+        </record>
+    </data>
+</odoo>
