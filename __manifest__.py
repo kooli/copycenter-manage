@@ -34,6 +34,7 @@
         'views/credeb_view.xml',
         'views/abonnement.xml',
         'views/views.xml',
+        'views/imprimante.xml',
 
     ],
     # only loaded in demonstration mode

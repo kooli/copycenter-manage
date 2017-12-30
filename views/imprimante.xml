@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="imprimante_view_form" model="ir.ui.view">
+      <field name="name">copycenter_uniflex.imprimante.form</field>
+      <field name="model">copycenter_uniflex.imprimante</field>
+      <field name="arch" type="xml">
+        <form string="Imprimantes">
+          <sheet>
+            <group>
+              <field name="nom"/>
+              <field name="model"/>
+              <field name="sn"/>
+              <field name="imprimante_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="imprimante_view_tree" model="ir.ui.view">
+      <field name="name">copycenter_uniflex.imprimante.tree</field>
+      <field name="model">copycenter_uniflex.imprimante</field>
+      <field name="arch" type="xml">
+        <tree string="Imprimantes">
+          <field name="nom"/>
+          <field name="model"/>
+          <field name="sn"/>
+          <field name="imprimante_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="imprimante_action_form" model="ir.actions.act_window">
+      <field name="name">Imprimantes</field>
+      <field name="res_model">copycenter_uniflex.imprimante</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Imprimantes
+        </p>
+        <p>
+          Configuration des imprimantes
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="menu_imprimante"
+      name="Imprimantes"
+      parent="configuration"
+      action="imprimante_action_form"/>
+
+</data>
+</odoo>

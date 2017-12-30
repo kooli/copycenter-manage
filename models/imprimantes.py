@@ -12,11 +12,17 @@ class Imprimante(models.Model):
     nom             = fields.Char("Nom de l'équipement", required=True)
     model           = fields.Text("Modèle")
     sn              = fields.Text("Numéro de Série")
+    imprimante_id   = fields.Many2one(
+        comodel_name="copycenter_uniflex.imprimante",
+        string="Imprimante",
+        required=True
+    )
+
 
 
 class EtatImprimante(models.Model):
     _name           = 'copycenter_uniflex.etat_imprimante'
-    _description    = 'Represente le statut de l\'imprimante a moment T'
+    _description    = 'Represente le statut de l\'imprimante a un moment T'
 
     copie_nb        = fields.Integer('Nombre de copies Noir&Blanc')
     copie_couleur   = fields.Integer('Nombre de copies Couleures')
@@ -29,5 +35,3 @@ class EtatImprimante(models.Model):
     tambour_jaune   = fields.Integer('Tambour Jaune')
     fr_toner        = fields.Integer('Flacon récupérateur de Toner')
     r_transfert     = fields.Integer('Rouleau de 2ème Transfert')
-    
-    imprimante_id   = fields.Many2one("copycenter_uniflex.imprimante", "Imprimante", required=True)
