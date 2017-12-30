@@ -5,72 +5,51 @@
         <!--Top menu item -->
         <menuitem
                 name="CopyCenter Uniflex"
-                id="copycenter_uniflex.menu_ccu"/>
+                id="menu_ccu"/>
 
         <!--menu categories -->
         <menuitem name="Tableau de Bord"
-                  id="copycenter_uniflex.menu_dashboard"
-                  parent="copycenter_uniflex.menu_ccu"
+                  id="menu_dashboard"
+                  parent="menu_ccu"
                   sequence="10"/>
 
         <menuitem name="Gestion des Clients"
-                  id="copycenter_uniflex.menu_client_inactif"
-                  parent="copycenter_uniflex.menu_ccu"
+                  id="menu_client_inactif"
+                  parent="menu_ccu"
                   sequence="20"/>
 
         <menuitem name="Clients"
-                  id="copycenter_uniflex.menu_client"
-                  parent="copycenter_uniflex.menu_client_inactif"
+                  id="menu_client"
+                  parent="menu_client_inactif"
                   sequence="30"
                   action="base.action_partner_form"/>
 
-
-
         <menuitem name="Abonnement"
-                  id="copycenter_uniflex.menu_abonnement"
-                  parent="copycenter_uniflex.menu_ccu"
+                  id="menu_abonnement"
+                  parent="menu_ccu"
                   sequence="50"/>
 
-        <menuitem name="Cartes Prépayées"
-                  id="copycenter_uniflex.menu_carte"
-                  parent="copycenter_uniflex.menu_abonnement"
-                  sequence="60"
-                  action="ccu_action_abonnement"/>
-
-        <menuitem name="Transaction Crédit/Débit Exceptionelle"
-                  id="copycenter_uniflex.menu_credeb"
-                  parent="copycenter_uniflex.menu_abonnement"
-                  sequence="70"
-                  action="ccu_action_credeb"/>
-
-
         <menuitem name="Rapport Général"
-                  id="copycenter_uniflex.menu_rapport_general"
-                  parent="copycenter_uniflex.menu_ccu"
+                  id="menu_rapport_general"
+                  parent="menu_ccu"
                   sequence="90" />
 
         <menuitem name="Rapport de Ventes sur Impression/Copies"
-                  id="copycenter_uniflex.menu_rapport_vente"
-                  parent="copycenter_uniflex.menu_rapport_general"
+                  id="menu_rapport_vente"
+                  parent="menu_rapport_general"
                   sequence="100"
                   action="point_of_sale.action_pos_pos_form"/>
 
         <menuitem name="Rapport d'achats de crédit"
-                  id="copycenter_uniflex.menu_rapport_achat"
-                  parent="copycenter_uniflex.menu_rapport_general"
+                  id="menu_rapport_achat"
+                  parent="menu_rapport_general"
                   sequence="110"
                   action="point_of_sale.action_pos_pos_form"/>
 
         <menuitem name="Configurations"
-                  id="copycenter_uniflex.configuration"
-                  parent="copycenter_uniflex.menu_ccu"
+                  id="configuration"
+                  parent="menu_ccu"
                   sequence="120" />
-
-        <menuitem name="Type de Transactions"
-                  id="copycenter_uniflex.type_transaction"
-                  parent="copycenter_uniflex.configuration"
-                  sequence="130"
-                  action="ccu_action_type_transaction"/>
 
     </data>
 </odoo>

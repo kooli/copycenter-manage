@@ -49,6 +49,12 @@
             </field>
         </record>
 
+        <menuitem name="Cartes Prépayées"
+          id="menu_carte"
+          parent="menu_abonnement"
+          sequence="60"
+          action="ccu_action_abonnement"/>
+
 
 
 

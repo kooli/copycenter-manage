@@ -25,6 +25,13 @@
         </record>
 
 
+        <menuitem name="Type de Transactions"
+          id="type_transaction"
+          parent="configuration"
+          sequence="130"
+          action="ccu_action_type_transaction"/>
+
+
 
 
     </data>

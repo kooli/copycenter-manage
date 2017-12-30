@@ -18,18 +18,21 @@
     # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
+    'installable': True,
+    'auto_install': False,
+    'application': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'point_of_sale'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         # 'views/templates.xml',
+        'views/menu.xml',
         'views/type_transaction_view.xml',
         'views/credeb_view.xml',
         'views/abonnement.xml',
-        'views/menu.xml',
         'views/views.xml',
 
     ],
