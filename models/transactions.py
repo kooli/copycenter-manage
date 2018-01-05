@@ -6,7 +6,7 @@ class Transaction(models.Model):
     _name           = 'copycenter_uniflex.transaction'
     _description    = 'Represente les differentes transactions du client'
 
-    abonnement_id           = fields.Many2one('res.partner', 'Abonnement')
+    abonnement_id           = fields.Many2one('res.partner', string='Abonnement')
     type_transsaction_id    = fields.Many2one("copycenter_uniflex.type_transaction", "Type de transaction", required=True)
 
     montant         = fields.Float("Montant", (9, 2))

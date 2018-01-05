@@ -10,7 +10,8 @@
             </field>
             <field name="arch" type="xml">
                 <form string="Créditer Cartes d'Abonnement ">
-                    <field name="abonnement_id" />
+		    <label for="abonnement_id"/>
+                    <field name="abonnement_id"/>
                     <field name="type_transsaction_id" />
                     <field name="montant" />
                     <field name="date_transaction" />
